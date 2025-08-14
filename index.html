@@ -1,103 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bommala Jagadeesha — Cloud & AI/ML Graduate</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jagadeesha Bommala | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --maxw:900px;
-      --primary:#0b63d9;
-      --accent:#d9a500;
-      --muted:#6b7280;
-      --card:#f8fafc;
-      font-family: Arial, sans-serif;
-    }
-    body{margin:0;background:#ffffff;color:#0f1724;line-height:1.5}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:20px}
-    header{padding:20px;background:#f1f5ff;border-radius:12px;text-align:center}
-    h1{margin:0;font-size:2rem}
-    h2{margin-top:0}
-    a.button{display:inline-block;margin:5px;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:bold}
-    .btn-primary{background:var(--primary);color:white}
-    .btn-outline{border:2px solid var(--primary);color:var(--primary)}
-    section{margin-top:30px}
-    .card{background:var(--card);padding:15px;border-radius:10px;margin-top:10px}
-    ul{margin:0;padding-left:20px}
-    footer{text-align:center;color:var(--muted);margin-top:40px;font-size:0.9rem}
+    body { font-family: 'Roboto', sans-serif; margin:0; padding:0; line-height:1.6; background:#f5f5f5; }
+    header { background:#0d6efd; color:white; padding:60px 20px; text-align:center; position:relative; }
+    header img { width:150px; height:150px; border-radius:50%; border:4px solid white; margin-bottom:20px; }
+    header h1 { margin:0; font-size:2.5rem; }
+    header p { margin:10px 0; font-size:1.2rem; }
+    section { padding:50px 20px; max-width:1000px; margin:auto; }
+    h2 { color:#0d6efd; margin-bottom:20px; text-align:center; }
+    .edu-card, .internship-card, .project-card { background:white; padding:20px; margin:15px 0; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+    .project-card img { width:100%; border-radius:8px; margin-bottom:10px; }
+    .contact a { color:#0d6efd; text-decoration:none; }
+    .skills { display:flex; flex-wrap:wrap; gap:10px; }
+    .skill { flex:1 1 200px; background:white; padding:10px; border-radius:8px; text-align:center; box-shadow:0 2px 4px rgba(0,0,0,0.1); }
+    .btn { display:inline-block; margin-top:10px; background:#ffc107; color:black; padding:10px 20px; border-radius:5px; text-decoration:none; font-weight:bold; }
+    @media(max-width:768px){ header h1{font-size:2rem;} header p{font-size:1rem;} }
   </style>
 </head>
 <body>
-<div class="wrap">
+
+  <!-- Hero Section -->
   <header>
-    <h1>Bommala Jagadeesha</h1>
-    <p>Cloud & AI/ML Graduate</p>
-    <p>Turning data into intelligent, cloud-ready solutions.</p>
-    <a class="button btn-primary" href="resume.pdf" download>📄 Download Resume</a>
-    <a class="button btn-outline" href="#projects">🚀 View Projects</a>
+    <img src="your-photo.jpg" alt="Jagadeesha Bommala">
+    <h1>Jagadeesha Bommala</h1>
+    <p>Aspiring AWS Cloud Engineer & AI/ML Enthusiast</p>
+    <a href="resume.pdf" target="_blank" class="btn">Download Resume</a>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a Cloud & AI/ML graduate from KITSW with hands-on experience in machine learning and AWS cloud services. 
-    I enjoy building end-to-end solutions — from data preprocessing to deployment — and I’m seeking opportunities to work on innovative, impactful projects in cloud and AI/ML.</p>
+  <!-- Career Objective -->
+  <section id="objective">
+    <h2>Career Objective</h2>
+    <p>I have completed the AWS re/Start Cloud Training and AI/ML projects. I am seeking opportunities in cloud computing and AI/ML to apply my skills and grow through real-world projects.</p>
   </section>
 
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="edu-card">
+      <h3>B.Tech in CSE (AI & ML)</h3>
+      <p>KITS, Warangal | 2020-2024 | CGPA: 8.39</p>
+    </div>
+    <div class="edu-card">
+      <h3>Intermediate - MPC</h3>
+      <p>2018-2020 | Percentage: 96%</p>
+    </div>
+    <div class="edu-card">
+      <h3>Schooling (10th)</h3>
+      <p>2017-2018 | GPA: 9.2</p>
+    </div>
+  </section>
+
+  <!-- Internships -->
+  <section id="internships">
+    <h2>Internships</h2>
+    <div class="internship-card">
+      <h3>3Cortex (Jul 2022 – Aug 2022)</h3>
+      <p>Trained in data science & cloud solutions. Analyzed datasets and derived insights for forecasting.</p>
+    </div>
+    <div class="internship-card">
+      <h3>CISCO Networking (Jun 2022 – Aug 2022)</h3>
+      <p>Configured and troubleshooted network devices using Packet Tracer. Learned networking fundamentals and security.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">AWS</div>
+      <div class="skill">Machine Learning & AI</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Web Development</div>
+      <div class="skill">Data Structures & Algorithms</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
-    <div class="card">
-      <h3>Traffic Sign Detection (97% Accuracy)</h3>
-      <ul>
-        <li>Led a 4-member team; built ResNet-based recognition model.</li>
-        <li>Preprocessed 32,635 images to handle lighting/weather variations.</li>
-        <li>Deployed live demo using Gradio.</li>
-      </ul>
-      <p><a href="https://github.com/BOMMALAJAGADEESHA/Traffic-Sign-Detection">View Code</a></p>
-    </div>
-    <div class="card">
-      <h3>Automated Attendance System (96% Accuracy)</h3>
-      <ul>
-        <li>Implemented real-time face recognition using Haar Cascade.</li>
-        <li>Achieved 96% accuracy with live webcam integration.</li>
-        <li>Developed GUI for attendance marking.</li>
-      </ul>
+    <div class="project-card">
+      <img src="traffic-sign-detection-gui.png" alt="Traffic Sign Detection">
+      <h3>Traffic Sign Detection (ResNet)</h3>
+      <p>97% accuracy using CNN on GTSRB dataset. Real-time recognition using webcam.</p>
+      <a href="https://github.com/BOMMALAJAGADEESHA/Traffic-Sign-Detection" target="_blank">View Project</a>
     </div>
   </section>
 
-  <section id="internship">
-    <h2>Internship</h2>
-    <div class="card">
-      <strong>3Cortex — Data Science & Cloud Intern</strong> (July 2022 – Aug 2022)
-      <ul>
-        <li>Analyzed one year of business data to detect anomalies and trends.</li>
-        <li>Created visual dashboards to support decision-making.</li>
-        <li>Learned cloud deployment basics for ML models.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>AWS re/Start — Tech Mahindra Foundation (2025)</li>
-      <li>Java Full Stack — Wipro TalentNext (2023)</li>
-      <li>Machine Learning — NPTEL (2023)</li>
-      <li>Data Science & Cloud — 3Cortex (2022)</li>
-    </ul>
-  </section>
-
+  <!-- Contact -->
   <section id="contact">
-    <h2>Contact</h2>
-    <ul>
-      <li>📧 <a href="mailto:jagadeeshabommala@gmail.com">jagadeeshabommala@gmail.com</a></li>
-      <li>🔗 <a href="https://linkedin.com/in/jagadeeshabommala">LinkedIn</a></li>
-      <li>💻 <a href="https://github.com/BOMMALAJAGADEESHA">GitHub</a></li>
-    </ul>
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:jagadeeshabommala@gmail.com">jagadeeshabommala@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/jagadeeshabommala">linkedin.com/in/jagadeeshabommala</a></p>
+    <p>WhatsApp: +91-XXXXXXXXXX</p>
   </section>
 
-  <footer>
-    © 2025 Bommala Jagadeesha — Portfolio
-  </footer>
-</div>
 </body>
 </html>
