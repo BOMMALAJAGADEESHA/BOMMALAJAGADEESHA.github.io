@@ -3,185 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jagadeesha Bommala - Portfolio</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f6f8;
-            color: #333;
-            scroll-behavior: smooth;
-        }
-        header {
-            background: linear-gradient(120deg, #4e54c8, #8f94fb);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-        header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid white;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin: 15px 0;
-        }
-        nav {
-            background: #333;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #ffcc00;
-        }
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 30px;
-        }
-        .card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 15px 0;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .icon {
-            width: 40px;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-        /* Typing Animation */
-        .typing {
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 3px solid white;
-            animation: typing 3s steps(30, end), blink .6s infinite;
-        }
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        @keyframes blink {
-            50% { border-color: transparent }
-        }
-    </style>
+    <title>Bommala Jagadeesha | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <img src="your-photo.jpg" alt="Jagadeesha Photo">
-        <h1 class="typing">Jagadeesha Bommala</h1>
-        <p>Warangal, Telangana, India · +91 93913 82916 · jagadeeshabommala@gmail.com</p>
-        <p><a href="https://github.com/BOMMALAJAGADEESHA" style="color:white;">GitHub</a> | 
-           <a href="https://linkedin.com/in/jagadeeshabommala" style="color:white;">LinkedIn</a></p>
+    <!-- Hero Section -->
+    <header class="hero">
+        <img src="your-photo.jpg" alt="Bommala Jagadeesha" class="profile-pic">
+        <h1 id="typing-name"></h1>
+        <h3>Cloud and AI/ML Graduate</h3>
+        <p>Warangal, Telangana, India · +91 93913 82916 · <a href="mailto:jagadeeshabommala@gmail.com">jagadeeshabommala@gmail.com</a></p>
+        <p>
+            <a href="https://github.com/BOMMALAJAGADEESHA" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
+            <a href="https://linkedin.com/in/jagadeeshabommala" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </p>
     </header>
 
-    <nav>
-        <a href="#career">Career Objective</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Technical Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#internship">Internship</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#strengths">Strengths</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <!-- Career Objective -->
+    <section class="section">
+        <h2>Career Objective</h2>
+        <p>As a fresher with a strong interest in AWS and Machine Learning, I am eager to apply my knowledge, work on real cloud projects, and continue developing my skills. I am motivated to join a team that values learning, innovation, and building practical technology solutions.</p>
+    </section>
 
-    <section id="career">
+    <!-- Education -->
+    <section class="section">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>B.Tech in Computer Science Engineering (AI & ML)</strong> – KITSW, Warangal, India (May 2024) | GPA: 8.39 / 10.00</li>
+            <li><strong>10+2 (MPC)</strong> – RD Junior College, Hanamkonda, India (July 2020) | 96.4%</li>
+            <li><strong>SSC (10th Standard)</strong> – ZPHS, Warangal, India (2018) | GPA: 9.0 / 10.0</li>
+        </ul>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="section skills">
+        <h2>Technical Skills</h2>
+        <div class="skill-box"><i class="fab fa-python"></i> Python</div>
+        <div class="skill-box"><i class="fab fa-java"></i> Java</div>
+        <div class="skill-box"><i class="fas fa-code"></i> C</div>
+        <div class="skill-box"><i class="fas fa-database"></i> SQL, MySQL</div>
+        <div class="skill-box"><i class="fas fa-robot"></i> TensorFlow, Keras, scikit-learn</div>
+        <div class="skill-box"><i class="fas fa-brain"></i> ANN, CNN, RNN</div>
+        <div class="skill-box"><i class="fas fa-cloud"></i> AWS (EC2, S3, VPC, IAM, CloudWatch, Cloud9)</div>
+        <div class="skill-box"><i class="fas fa-cogs"></i> UiPath</div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+        <h2>Projects</h2>
         <div class="card">
-            <h2>Career Objective</h2>
-            <p>To secure a challenging position in a reputable organization where I can leverage my skills in AI, ML, and cloud technologies to contribute to organizational success while continuously learning and growing professionally.</p>
+            <h3>Traffic Sign Detection & Recognition using ResNet</h3>
+            <p>Built a ResNet-based CNN to detect and classify traffic signs from the GTSRB dataset (32,635 images). Achieved 97% accuracy through transfer learning and hyperparameter tuning. Deployed with Gradio for real-time predictions.</p>
+        </div>
+        <div class="card">
+            <h3>Automated Attendance System using Face Recognition</h3>
+            <p>Developed a real-time face recognition system using Haar Cascade via webcam. Achieved 96% accuracy and automated student identification and attendance tracking.</p>
         </div>
     </section>
 
-    <section id="education">
+    <!-- Internships -->
+    <section class="section">
+        <h2>Internships</h2>
         <div class="card">
-            <h2>Education</h2>
-            <ul>
-                <li><b>B.Tech (AIML)</b> - KITSW, 2024</li>
-                <li><b>Intermediate</b> - RD Junior College, 96%, 2020</li>
-                <li><b>SSC</b> - ZPHS, 9.0 GPA, 2018</li>
-            </ul>
+            <h3>Data Science & Cloud Solutions Intern – 3Cortex, Hyderabad</h3>
+            <p>Analyzed business data, detected anomalies, built forecasting models, and worked hands-on with cloud infrastructure and data pipelines.</p>
         </div>
     </section>
 
-    <section id="skills">
-        <div class="card">
-            <h2><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" class="icon"> Technical Skills</h2>
-            <p>Python, Java, AWS Cloud, Machine Learning, Deep Learning, Data Structures, HTML, CSS, JavaScript.</p>
-        </div>
+    <!-- Certifications -->
+    <section class="section">
+        <h2>Certifications & Training</h2>
+        <ul>
+            <li>AWS re/Start Program – Tech Mahindra Foundation (April 2025 – July 2025)</li>
+            <li>Java Full Stack Development – Wipro TalentNext (May 2023 – September 2023)</li>
+            <li>Introduction to Machine Learning – Swayam NPTEL (January 2023 – March 2023)</li>
+            <li>Data Science & Cloud Solutions – 3Cortex (July 2022 – August 2022)</li>
+        </ul>
     </section>
 
-    <section id="projects">
-        <div class="card">
-            <h2>Projects</h2>
-            <ul>
-                <li>Traffic Sign Detection using ResNet (97% accuracy)</li>
-    
-                <li>Automated Attendance System using Face Recognition</li>
-            </ul>
-        </div>
+    <!-- Activities -->
+    <section class="section">
+        <h2>Activities</h2>
+        <p>Sumshodhini 2022 – Participated in a Machine Learning quiz competition, enhancing understanding of ML algorithms and problem-solving skills.</p>
     </section>
 
-    <section id="internship">
-        <div class="card">
-            <h2>Internship</h2>
-            <p>3Cortex - Data Science & Cloud Solutions Internship: Worked with real-world datasets, applied ML algorithms, and deployed solutions on cloud platforms.</p>
-        </div>
+    <!-- Contact -->
+    <section class="section contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:jagadeeshabommala@gmail.com">jagadeeshabommala@gmail.com</a></p>
+        <p>Phone: +91 93913 82916</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/jagadeeshabommala" target="_blank">linkedin.com/in/jagadeeshabommala</a></p>
+        <p>GitHub: <a href="https://github.com/BOMMALAJAGADEESHA" target="_blank">github.com/BOMMALAJAGADEESHA</a></p>
     </section>
-
-    <section id="certificates">
-        <div class="card">
-            <h2>Certificates</h2>
-            <ul>
-                <li>AWS re/Start Cloud Program</li>
-                <li>Java Certification - Wipro TalentNext</li>
-                <li>Cisco Cybersecurity Internship</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="strengths">
-        <div class="card">
-            <h2>Strengths</h2>
-            <ul>
-                <li>Quick Learner</li>
-                <li>Team Player</li>
-                <li>Problem Solving</li>
-                <li>Adaptability</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="card">
-            <h2>Contact Information</h2>
-            <p>📍 Warangal, Telangana, India</p>
-            <p>📞 +91 93913 82916</p>
-            <p>📧 jagadeeshabommala@gmail.com</p>
-            <p>🌐 <a href="https://github.com/BOMMALAJAGADEESHA">GitHub</a> | <a href="https://linkedin.com/in/jagadeeshabommala">LinkedIn</a></p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Jagadeesha Bommala. All Rights Reserved.</p>
-    </footer>
 
 </body>
 </html>
