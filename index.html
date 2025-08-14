@@ -3,101 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bommala Jagadeesha | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Bommalajagadeesha | Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #0077b6, #00b4d8);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+        nav {
+            background: #023e8a;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #90e0ef;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #0077b6;
+            border-bottom: 2px solid #90e0ef;
+            padding-bottom: 5px;
+        }
+        .projects img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+        .projects img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background: #023e8a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #0077b6;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #023e8a;
+        }
+        /* Typing effect */
+        .typing {
+            border-right: 3px solid white;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(30), blink .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink {
+            50% { border-color: transparent }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <img src="your-photo.jpg" alt="Bommala Jagadeesha" class="profile-pic">
-        <h1 id="typing-name"></h1>
-        <h3>Cloud and AI/ML Graduate</h3>
-        <p>Warangal, Telangana, India · +91 93913 82916 · <a href="mailto:jagadeeshabommala@gmail.com">jagadeeshabommala@gmail.com</a></p>
-        <p>
-            <a href="https://github.com/BOMMALAJAGADEESHA" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
-            <a href="https://linkedin.com/in/jagadeeshabommala" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        </p>
-    </header>
+<header>
+    <h1 class="typing">Hi, I'm Bommalajagadeesha</h1>
+    <p>Fresher | B.Tech in AIML | AWS Cloud & Machine Learning Enthusiast</p>
+</header>
 
-    <!-- Career Objective -->
-    <section class="section">
-        <h2>Career Objective</h2>
-        <p>As a fresher with a strong interest in AWS and Machine Learning, I am eager to apply my knowledge, work on real cloud projects, and continue developing my skills. I am motivated to join a team that values learning, innovation, and building practical technology solutions.</p>
-    </section>
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#internships">Internships</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <!-- Education -->
-    <section class="section">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>B.Tech in Computer Science Engineering (AI & ML)</strong> – KITSW, Warangal, India (May 2024) | GPA: 8.39 / 10.00</li>
-            <li><strong>10+2 (MPC)</strong> – RD Junior College, Hanamkonda, India (July 2020) | 96.4%</li>
-            <li><strong>SSC (10th Standard)</strong> – ZPHS, Warangal, India (2018) | GPA: 9.0 / 10.0</li>
-        </ul>
-    </section>
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a B.Tech graduate in Artificial Intelligence and Machine Learning with a passion for cloud computing, 
+        intelligent systems, and data-driven problem solving. I have completed internships in Data Science and Cloud Solutions, 
+        and AWS re/Start training with hands-on projects. I aim to bring fresh ideas and dedication to my first professional role.
+    </p>
+</section>
 
-    <!-- Technical Skills -->
-    <section class="section skills">
-        <h2>Technical Skills</h2>
-        <div class="skill-box"><i class="fab fa-python"></i> Python</div>
-        <div class="skill-box"><i class="fab fa-java"></i> Java</div>
-        <div class="skill-box"><i class="fas fa-code"></i> C</div>
-        <div class="skill-box"><i class="fas fa-database"></i> SQL, MySQL</div>
-        <div class="skill-box"><i class="fas fa-robot"></i> TensorFlow, Keras, scikit-learn</div>
-        <div class="skill-box"><i class="fas fa-brain"></i> ANN, CNN, RNN</div>
-        <div class="skill-box"><i class="fas fa-cloud"></i> AWS (EC2, S3, VPC, IAM, CloudWatch, Cloud9)</div>
-        <div class="skill-box"><i class="fas fa-cogs"></i> UiPath</div>
-    </section>
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+    <h3>Traffic Sign Detection and Recognition (97% Accuracy)</h3>
+    <img src="traffic-sign-detection-gui.png" alt="Traffic Sign Detection GUI">
+    <img src="traffic-sign-detection-samples.png" alt="Traffic Sign Samples">
+    <p>Developed using ResNet and GTSRB dataset with 32,635 images. Implemented preprocessing, transfer learning, and hyperparameter optimization.</p>
 
-    <!-- Projects -->
-    <section class="section">
-        <h2>Projects</h2>
-        <div class="card">
-            <h3>Traffic Sign Detection & Recognition using ResNet</h3>
-            <p>Built a ResNet-based CNN to detect and classify traffic signs from the GTSRB dataset (32,635 images). Achieved 97% accuracy through transfer learning and hyperparameter tuning. Deployed with Gradio for real-time predictions.</p>
-        </div>
-        <div class="card">
-            <h3>Automated Attendance System using Face Recognition</h3>
-            <p>Developed a real-time face recognition system using Haar Cascade via webcam. Achieved 96% accuracy and automated student identification and attendance tracking.</p>
-        </div>
-    </section>
+    <h3>Prediction of Cardiac Arrhythmia</h3>
+    <p>Applied machine learning algorithms to predict arrhythmia from patient data, improving diagnostic accuracy.</p>
+</section>
 
-    <!-- Internships -->
-    <section class="section">
-        <h2>Internships</h2>
-        <div class="card">
-            <h3>Data Science & Cloud Solutions Intern – 3Cortex, Hyderabad</h3>
-            <p>Analyzed business data, detected anomalies, built forecasting models, and worked hands-on with cloud infrastructure and data pipelines.</p>
-        </div>
-    </section>
+<section id="internships">
+    <h2>Internships</h2>
+    <ul>
+        <li>3Cortex – Data Science & Cloud Solutions</li>
+        <li>Nu-Way Heat Transfer Pvt Ltd – QA/QC Junior Engineer</li>
+        <li>Sathya Techno Fabs – Production Engineer (Third-party for Tata Steels)</li>
+        <li>Coakcess Pvt Ltd – Quality Control</li>
+    </ul>
+</section>
 
-    <!-- Certifications -->
-    <section class="section">
-        <h2>Certifications & Training</h2>
-        <ul>
-            <li>AWS re/Start Program – Tech Mahindra Foundation (April 2025 – July 2025)</li>
-            <li>Java Full Stack Development – Wipro TalentNext (May 2023 – September 2023)</li>
-            <li>Introduction to Machine Learning – Swayam NPTEL (January 2023 – March 2023)</li>
-            <li>Data Science & Cloud Solutions – 3Cortex (July 2022 – August 2022)</li>
-        </ul>
-    </section>
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:bommalajagadeesha@example.com">bommalajagadeesha@example.com</a></p>
+    <p><a href="resume.pdf" class="btn">Download Resume</a></p>
+</section>
 
-    <!-- Activities -->
-    <section class="section">
-        <h2>Activities</h2>
-        <p>Sumshodhini 2022 – Participated in a Machine Learning quiz competition, enhancing understanding of ML algorithms and problem-solving skills.</p>
-    </section>
+<footer>
+    <p>&copy; 2025 Bommalajagadeesha | All Rights Reserved</p>
+</footer>
 
-    <!-- Contact -->
-    <section class="section contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:jagadeeshabommala@gmail.com">jagadeeshabommala@gmail.com</a></p>
-        <p>Phone: +91 93913 82916</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/jagadeeshabommala" target="_blank">linkedin.com/in/jagadeeshabommala</a></p>
-        <p>GitHub: <a href="https://github.com/BOMMALAJAGADEESHA" target="_blank">github.com/BOMMALAJAGADEESHA</a></p>
-    </section>
+<script>
+    // Typing effect restart after load
+    document.addEventListener("DOMContentLoaded", function(){
+        const el = document.querySelector(".typing");
+        const text = el.textContent;
+        el.textContent = "";
+        let i = 0;
+        setInterval(() => {
+            if(i < text.length){
+                el.textContent += text.charAt(i);
+                i++;
+            }
+        }, 100);
+    });
+</script>
 
 </body>
 </html>
