@@ -16,14 +16,13 @@
   --muted:#6b7280;
   --accent-1:#0288d1; 
   --accent-2:#26c6da; 
-  --glass: rgba(255,255,255,0.6);
-  --maxw:1100px;
   --radius:12px;
+  --maxw:1100px;
 }
 *{box-sizing:border-box}
 html,body{height:100%; margin:0; font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background: linear-gradient(135deg,#e0f7fa,#f1f8e9); color:#0f1724; line-height:1.5;}
-
 a{text-decoration:none;}
+
 .nav {position:fixed; left:0; right:0; top:16px; display:flex; justify-content:center; z-index:60; pointer-events:none;}
 .nav-inner{background: rgba(255,255,255,0.85); border-radius:999px; padding:8px 14px; box-shadow: 0 6px 20px rgba(49,64,83,0.08); pointer-events:auto; backdrop-filter: blur(6px);}
 .nav-inner a{color:var(--accent-1); margin:0 10px; font-weight:600; font-size:0.95rem; padding:6px 8px;}
@@ -31,24 +30,43 @@ a{text-decoration:none;}
 
 .container{max-width:var(--maxw); margin:0 auto; padding:28px 20px 80px;}
 
-.hero{display:grid; grid-template-columns:200px 1fr; gap:28px; align-items:center; padding:44px 20px; margin-top:28px; background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.85)); border-radius: var(--radius); box-shadow: 0 8px 30px rgba(16,24,40,0.06); border: 1px solid rgba(11,22,40,0.03);}
-.avatar {width:180px; height:180px; border-radius:16px; overflow:hidden; display:flex; align-items:center; justify-content:center; background: linear-gradient(135deg,var(--accent-1),var(--accent-2)); border: 4px solid rgba(255,255,255,0.8);}
-.avatar img{ width:100%; height:100%; object-fit:cover; display:block }
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap:28px;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.85));
+  padding:40px 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(16,24,40,0.06);
+}
 
+.avatar {
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  overflow:hidden;
+  border: 4px solid rgba(255,255,255,0.8);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+.avatar img { width:100%; height:100%; object-fit:cover; display:block; }
+
+.hero-meta { max-width:600px; }
 .hero-meta h1{ margin:0; font-size:1.8rem; color:#0b1220; letter-spacing:0.6px; }
 .role { margin-top:8px; color:var(--muted); font-weight:600; }
 .contact-line { margin-top:12px; color:#1f2937; font-size:0.95rem; }
 .cta-row{ display:flex; gap:10px; margin-top:16px; flex-wrap:wrap }
-.btn { display:inline-flex; align-items:center; gap:10px; background: linear-gradient(90deg,var(--accent-1),var(--accent-2)); color:white; padding:10px 14px; border-radius:10px; font-weight:700; font-size:0.95rem; box-shadow: 0 8px 20px rgba(79,70,229,0.08);}
+.btn { display:inline-flex; align-items:center; gap:10px; background: linear-gradient(90deg,var(--accent-1),var(--accent-2)); color:white; padding:10px 14px; border-radius:10px; font-weight:700; font-size:0.95rem;}
 .btn-ghost { background:transparent; border:1px solid rgba(15,23,36,0.06); color:var(--accent-1); padding:10px 14px; border-radius:10px; font-weight:600;}
 .intro {margin-top:16px; padding:12px; background: linear-gradient(90deg, rgba(2,136,209,0.06), rgba(38,198,218,0.04)); border-radius:10px; color:#0f1724;}
 
-/* SECTIONS */
+/* Sections */
 section{ margin-top:28px }
 .section-head{ display:flex; align-items:center; gap:12px; margin-bottom:12px }
 h2.section-title { margin:0; color:var(--accent-1); font-size:1.25rem; }
 .grid{ display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-.card { background: var(--card); padding:16px; border-radius:12px; box-shadow: 0 6px 18px rgba(15,23,36,0.04); border: 1px solid rgba(15,23,36,0.03); transition: transform .22s ease, box-shadow .22s ease;}
+.card { background: var(--card); padding:16px; border-radius:var(--radius); box-shadow:0 6px 18px rgba(15,23,36,0.04); border:1px solid rgba(15,23,36,0.03); transition: transform .22s ease, box-shadow .22s ease;}
 .card:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.08) }
 .small { color:var(--muted); font-size:0.92rem; margin-bottom:8px; }
 .project-thumb{ width:100%; height:160px; object-fit:cover; border-radius:8px; margin-bottom:10px; display:block; transition: transform .28s ease }
@@ -58,14 +76,12 @@ h2.section-title { margin:0; color:var(--accent-1); font-size:1.25rem; }
 .skill i{ font-size:1.4rem; color:var(--accent-1); width:36px; text-align:center }
 .contact-row{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:8px }
 .pill{ background:rgba(10,20,36,0.03); padding:10px 12px; border-radius:999px; color:#0f1724; font-weight:600; border:1px solid rgba(15,23,36,0.04) }
-footer{ margin-top:36px; padding:18px; text-align:center; color:var(--muted); font-size:0.95rem }
+footer{ margin-top:36px; padding:18px; text-align:center; color:var(--muted); font-size:0.95rem; border-top:1px solid rgba(0,0,0,0.08); }
 
 /* small screens */
 @media (max-width:880px){
-  .hero{ grid-template-columns: 1fr; text-align:center; gap:18px; padding:28px }
+  .hero{ flex-direction:column; text-align:center; gap:18px; padding:28px }
   .avatar{ width:140px; height:140px; margin:0 auto }
-  .hero-meta{ order:2 }
-  .container{ padding:20px }
 }
 </style>
 </head>
@@ -87,31 +103,29 @@ footer{ margin-top:36px; padding:18px; text-align:center; color:var(--muted); fo
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-card">
-      <div class="avatar" title="Profile photo">
-        <img src="profile.png" alt="BOMMALA JAGADEESHA — Profile photo">
-      </div>
+    <div class="avatar" title="Profile photo">
+      <img src="profile.png" alt="BOMMALA JAGADEESHA — Profile photo">
     </div>
-    <div class="hero-meta" style="padding-right:6px;">
-      <h1 id="typed-name" style="margin-bottom:6px;">BOMMALA JAGADEESHA</h1>
-      <div class="role">Cloud and AI/ML Graduate</div>
+    <div class="hero-meta">
+      <h1 id="typed-name">BOMMALA JAGADEESHA</h1>
+      <div class="role">Cloud & AI/ML Graduate</div>
       <div class="contact-line">
-        <span class="small">Warangal, Telangana, India</span> &nbsp;·&nbsp;
+        Warangal, Telangana, India &nbsp;·&nbsp;
         <a href="tel:+919391382916" style="color:var(--accent-1); font-weight:600;">+91 93913 82916</a> &nbsp;·&nbsp;
         <a href="mailto:jagadeeshabommala@gmail.com" style="color:var(--accent-1); font-weight:600;">jagadeeshabommala@gmail.com</a>
       </div>
       <div class="cta-row">
-        <a class="btn" href="resume.pdf" download><i class="fa-solid fa-download"></i> Resume</a>
+        <a class="btn" href="resume.pdf" download>Resume</a>
         <a class="btn-ghost" href="https://github.com/BOMMALAJAGADEESHA" target="_blank">GitHub</a>
         <a class="btn-ghost" href="https://linkedin.com/in/jagadeeshabommala" target="_blank">LinkedIn</a>
       </div>
-      <div class="intro">
-        As a fresher with a strong interest in AWS and Machine Learning, I am eager to apply my knowledge to real cloud projects and continue developing practical technology solutions.
-      </div>
+      <p class="intro">
+        Fresher with a strong interest in AWS and Machine Learning. Eager to contribute to cloud projects and develop practical solutions while continuously learning.
+      </p>
     </div>
   </section>
 
-  <!-- EDUCATION / CAREER OBJECTIVE -->
+  <!-- CAREER OBJECTIVE & EDUCATION -->
   <section id="about">
     <div class="section-head"><h2 class="section-title">Career Objective & Education</h2></div>
     <div class="grid">
@@ -207,11 +221,10 @@ footer{ margin-top:36px; padding:18px; text-align:center; color:var(--muted); fo
     </div>
   </section>
 
-  <footer style="margin-top:36px; padding:18px; text-align:center; color:var(--muted); font-size:0.95rem; border-top:1px solid rgba(0,0,0,0.08);">
-  © 2025 BOMMALA JAGADEESHA · <a href="resume.pdf" download style="color:var(--accent-1); text-decoration:none; font-weight:600;">Download CV</a>
+  <!-- FOOTER -->
+  <footer>
+    © 2025 BOMMALA JAGADEESHA · <a href="resume.pdf" download style="color:var(--accent-1); text-decoration:none; font-weight:600;">Download CV</a>
   </footer>
-
-
 
 </main>
 
@@ -227,39 +240,17 @@ footer{ margin-top:36px; padding:18px; text-align:center; color:var(--muted); fo
   type();
 })();
 
-// Fade-in on scroll
-(function(){
-  const obs = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        e.target.style.transform = "translateY(0)";
-        e.target.style.opacity = 1;
-        obs.unobserve(e.target);
-      }
-    });
-  }, {threshold:0.12});
-  document.querySelectorAll('.card, .hero-card, .project-thumb, .skill').forEach(el=>{
-    el.style.transform = "translateY(18px)";
-    el.style.opacity = 0;
-    el.style.transition = "opacity .6s ease, transform .6s ease";
-    obs.observe(el);
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const target = document.querySelector(a.getAttribute('href'));
+    if(!target) return;
+    e.preventDefault();
+    window.scrollTo({top: target.offsetTop-20, behavior:'smooth'});
   });
-})();
-
-// Smooth anchor scroll
-(function(){
-  const offset = 20;
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click', (e)=>{
-      const href = a.getAttribute('href'); if(!href||href==='#')return;
-      const id = href.slice(1);
-      const target = document.getElementById(id); if(!target)return;
-      e.preventDefault();
-      window.scrollTo({top: target.offsetTop-offset, behavior:'smooth'});
-    });
-  });
-})();
+});
 </script>
 
 </body>
 </html>
+
