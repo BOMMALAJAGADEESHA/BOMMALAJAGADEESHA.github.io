@@ -1,3 +1,5 @@
+![AWS re/Start Graduate Badge](https://images.credly.com/size/340x340/images/8d3b8f6d-2d2e-4e3e-9a2e-5b9b8e8c8a6e/AWS_reStart_Graduate.png)
+
 # Bommala Jagadeesha — Portfolio
 
 **Machine Learning and Cloud Enthusiast | Aspiring Software Engineer**
@@ -26,14 +28,15 @@ It contains my projects, resume, and contact information.
 ### Traffic Sign Detection & Recognition (ResNet)
 - Built a CNN using ResNet to detect and classify traffic signs with **98% accuracy**  
 - Deployed a real-time interface using **Gradio**  
-- **Tech Stack:** Python, TensorFlow/Keras, OpenCV  
-- **Repo:** *(to be linked)*  
+- **Tech Stack:** Python, TensorFlow/Keras, OpenCV
+- **Demo:** [Open in Colab](https://colab.research.google.com/github/BOMMALAJAGADEESHA/Traffic-Sign-Detection-ResNet/blob/main/traffic_sign_detection.ipynb)  
+- **Repo:** [GitHub Repository](https://github.com/BOMMALAJAGADEESHA/Traffic-Sign-Detection-ResNet) 
+
 
 ### Automated Attendance System (Face Recognition)
 - Developed a **real-time face recognition system** with 97% accuracy  
 - Built a **GUI** for automated attendance tracking  
 - **Tech Stack:** Python, OpenCV, Tkinter  
-- **Repo:** *(to be linked)*  
 
 👉 More details available on the [website](https://bommalajagadeesha.github.io).
 
@@ -61,9 +64,4 @@ It contains my projects, resume, and contact information.
 
 ---
 
-## 📂 Local Development
-To run locally, just open `index.html` in your browser.  
-Or start a simple HTTP server:
 
-```bash
-python -m http.server 8000
