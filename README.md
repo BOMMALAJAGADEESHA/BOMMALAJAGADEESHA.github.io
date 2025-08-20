@@ -1,5 +1,3 @@
-![AWS re/Start Graduate Badge](https://images.credly.com/size/340x340/images/8d3b8f6d-2d2e-4e3e-9a2e-5b9b8e8c8a6e/AWS_reStart_Graduate.png)
-
 # Bommala Jagadeesha — Portfolio
 
 **Machine Learning and Cloud Enthusiast | Aspiring Software Engineer**
