@@ -49,8 +49,7 @@ It contains my projects, resume, and contact information.
 ---
 
 ## 📜 Certifications
-- AWS re/Start Cloud Computing Program – Tech Mahindra Foundation  
-- AWS Cloud Practitioner – Amazon Web Services  
+- AWS re/Start Cloud Computing Program – Tech Mahindra Foundation   
 - Java Full Stack Development – Wipro Talent Next  
 - Introduction to Machine Learning – Swayam NPTEL  
 
