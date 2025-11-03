@@ -1,311 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bommala Jagadeesha | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-  :root {
-    --bg1: #e8f0ff;
-    --bg2: #f9faff;
-    --card: #ffffff;
-    --muted: #5b6470;
-    --accent-1: #4b6cb7;
-    --accent-2: #182848;
-    --accent-3: #8e9fff;
-    --maxw: 1100px;
-    --radius: 12px;
-  }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bommala Jagadeesha | Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --bg1: #eef3ff;
+  --bg2: #f9faff;
+  --card: #ffffff;
+  --accent-1: #4b6cb7;
+  --accent-2: #182848;
+  --accent-3: #8e9fff;
+  --radius: 12px;
+  --maxw: 1100px;
+  --muted: #475569;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+  color: #0f1724;
+  line-height: 1.6;
+}
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+header h1 {
+  font-size: 2rem;
+  color: var(--accent-2);
+}
+header .role {
+  color: var(--accent-1);
+  font-weight: 600;
+  margin-top: 6px;
+}
+.contact {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+section {
+  margin-top: 40px;
+}
+h2.section-title {
+  color: var(--accent-1);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  position: relative;
+}
+h2.section-title::after {
+  content:"";
+  display:block;
+  width:60px;
+  height:3px;
+  background: linear-gradient(90deg,var(--accent-1),var(--accent-3));
+  border-radius:3px;
+  margin-top:5px;
+}
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: 0 6px 16px rgba(75,108,183,0.1);
+  margin-bottom: 18px;
+}
+ul { margin-left:20px; margin-top:8px; }
+li { margin-bottom:6px; }
 
-  * { box-sizing:border-box; margin:0; padding:0; }
-  body {
-    font-family: Inter, system-ui, "Segoe UI", Roboto;
-    background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
-    color:#0f1724;
-    line-height:1.6;
-  }
-
-  /* NAV */
-  .nav {
-    position:fixed; left:0; right:0; top:16px;
-    display:flex; justify-content:center; z-index:60;
-    pointer-events:none;
-  }
-  .nav-inner {
-    background: rgba(255,255,255,0.9);
-    border-radius:999px;
-    padding:10px 20px;
-    box-shadow: 0 6px 25px rgba(49,64,83,0.15);
-    pointer-events:auto;
-    backdrop-filter: blur(8px);
-  }
-  .nav-inner a {
-    color:var(--accent-1);
-    text-decoration:none;
-    margin:0 12px;
-    font-weight:600;
-    font-size:0.95rem;
-    padding:6px 10px;
-    transition: color .18s, transform .12s;
-  }
-  .nav-inner a:hover {
-    color: var(--accent-3);
-    transform:translateY(-2px);
-  }
-
-  .container {
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:28px 20px 80px;
-  }
-
-  /* HERO */
-  .hero {
-    display:grid;
-    grid-template-columns: 200px 1fr;
-    gap:28px;
-    align-items:center;
-    padding:44px 24px;
-    margin-top:70px;
-    background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(240,245,255,0.95));
-    border-radius: var(--radius);
-    box-shadow: 0 10px 30px rgba(50,60,120,0.15);
-  }
-  .avatar {
-    width:180px; height:180px; border-radius:20px; overflow:hidden;
-    display:flex; align-items:center; justify-content:center;
-    background: linear-gradient(135deg,var(--accent-1),var(--accent-3));
-    border: 4px solid rgba(255,255,255,0.9);
-    box-shadow: 0 0 25px rgba(75,108,183,0.25);
-  }
-  .avatar img { width:100%; height:100%; object-fit:cover; display:block; }
-
-  .hero-meta h1 {
-    margin:0;
-    font-size:1.9rem;
-    color:#0b1220;
-  }
-  .role { margin-top:8px; color:var(--muted); font-weight:600; }
-  .contact-line { margin-top:12px; color:#1f2937; font-size:0.95rem; }
-
-  .cta-row {
-    display:flex; gap:10px; margin-top:16px; flex-wrap:wrap;
-  }
-  .btn {
-    display:inline-flex; align-items:center; gap:10px;
-    background: linear-gradient(90deg,var(--accent-1),var(--accent-3));
-    color:white; padding:10px 16px;
-    border-radius:10px; text-decoration:none;
-    font-weight:700; font-size:0.95rem;
-    box-shadow: 0 6px 20px rgba(75,108,183,0.3);
-    transition: transform .15s;
-  }
-  .btn:hover { transform:translateY(-2px); }
-
-  .btn-ghost {
-    background:transparent;
-    border:2px solid var(--accent-1);
-    color:var(--accent-1);
-    padding:10px 16px;
-    border-radius:10px;
-    font-weight:600;
-    text-decoration:none;
-    transition: all .2s ease;
-  }
-  .btn-ghost:hover {
-    background: linear-gradient(90deg,var(--accent-1),var(--accent-3));
-    color:white;
-    box-shadow: 0 4px 15px rgba(75,108,183,0.25);
-  }
-
-  .intro {
-    margin-top:16px;
-    padding:12px;
-    background: linear-gradient(90deg, rgba(75,108,183,0.07), rgba(142,159,255,0.07));
-    border-radius:10px;
-    color:#0f1724;
-  }
-
-  section { margin-top:40px; }
-  h2.section-title {
-    color:var(--accent-1);
-    font-size:1.35rem;
-    margin-bottom:12px;
-    position:relative;
-  }
-  h2.section-title::after {
-    content:"";
-    display:block;
-    width:50px;
-    height:3px;
-    background: linear-gradient(90deg,var(--accent-1),var(--accent-3));
-    margin-top:6px;
-    border-radius:3px;
-  }
-
-  .grid {
-    display:grid; gap:18px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  }
-
-  .card {
-    background: var(--card);
-    padding:18px;
-    border-radius:14px;
-    box-shadow: 0 8px 20px rgba(75,108,183,0.08);
-    border: 1px solid rgba(15,23,36,0.05);
-    transition: transform .25s ease, box-shadow .25s ease;
-  }
-  .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 35px rgba(75,108,183,0.18);
-  }
-
-  .skill-grid {
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
-    gap:12px;
-  }
-  .skill {
-    display:flex; gap:12px; align-items:center;
-    padding:10px;
-    border-radius:10px;
-    background: linear-gradient(180deg,#ffffff,#f3f5ff);
-    border:1px solid rgba(11,22,40,0.05);
-    box-shadow: 0 4px 10px rgba(75,108,183,0.05);
-  }
-  .skill i {
-    font-size:1.4rem;
-    color:var(--accent-1);
-    width:36px;
-    text-align:center;
-  }
-
-  .project-thumb {
-    width:100%;
-    max-width:380px;
-    height:auto;
-    display:block;
-    margin:10px auto;
-    border-radius:12px;
-    box-shadow: 0 6px 20px rgba(75,108,183,0.15);
-  }
-
-  .contact-row {
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-    align-items:center;
-    margin-top:8px;
-  }
-  .pill {
-    background:rgba(75,108,183,0.08);
-    padding:10px 12px;
-    border-radius:999px;
-    color:#0f1724;
-    font-weight:600;
-    border:1px solid rgba(75,108,183,0.15);
-  }
-  .pill i { margin-right:6px; }
-
-  footer {
-    margin-top:36px;
-    padding:18px;
-    text-align:center;
-    color:var(--muted);
-    font-size:0.95rem;
-  }
-
-  @media (max-width:880px) {
-    .hero {
-      grid-template-columns: 1fr;
-      text-align:center;
-      gap:18px;
-      padding:28px;
-    }
-    .avatar {
-      width:140px; height:140px;
-      margin:0 auto;
-    }
-  }
-  </style>
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+.skill {
+  background: linear-gradient(180deg,#ffffff,#f3f5ff);
+  border-radius:10px;
+  border:1px solid rgba(11,22,40,0.05);
+  box-shadow: 0 4px 10px rgba(75,108,183,0.08);
+  padding:10px 12px;
+  display:flex; gap:12px; align-items:center;
+}
+.skill i {
+  color: var(--accent-1);
+  font-size:1.3rem;
+  width:30px;
+  text-align:center;
+}
+footer {
+  margin-top: 40px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+@media (max-width:800px) {
+  .container { padding: 20px; }
+}
+</style>
 </head>
-
 <body>
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
   <div class="container">
-    <!-- Hero Section -->
-    <section class="hero" id="about">
-      <div class="avatar">
-        <img src="profile.jpg" alt="Bommala Jagadeesha">
+
+    <header>
+      <h1>Bommala Jagadeesha</h1>
+      <div class="role">Software Engineer | Python & Cloud Computing Enthusiast | AI & ML Graduate</div>
+      <div class="contact">
+        Hyderabad, Telangana · +91 93913 82916 · jagadeeshabommala@gmail.com · LinkedIn · Portfolio
       </div>
-      <div class="hero-meta">
-        <h1>Bommala Jagadeesha</h1>
-        <div class="role">Software Engineer | Python & Cloud Enthusiast | AI & ML Graduate</div>
-        <div class="contact-line">Hyderabad, Telangana · +91 93913 82916 · jagadeeshabommala@gmail.com</div>
-        <div class="cta-row">
-          <a href="https://linkedin.com" class="btn"><i class="fab fa-linkedin"></i>LinkedIn</a>
-          <a href="https://github.com" class="btn-ghost"><i class="fab fa-github"></i>GitHub</a>
-        </div>
-        <p class="intro">
-          B.Tech graduate specialized in Artificial Intelligence & Machine Learning. Passionate about
-          developing intelligent systems, scalable applications, and exploring cutting-edge technologies
-          in Python, Cloud, and AI.
-        </p>
+    </header>
+
+    <section>
+      <h2 class="section-title">Career Objective</h2>
+      <div class="card">
+        <p>B.Tech graduate in AI & ML skilled in Python, Machine Learning, and AWS Cloud. Passionate about building intelligent solutions and deploying scalable cloud applications.</p>
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="card">
+        <ul>
+          <li><strong>Kakatiya Institute of Technology and Science (KITSW), Warangal</strong><br>
+          B.Tech in AI & ML | 2020 – 2024 | CGPA: 8.39/10.00</li>
+          <li><strong>RD Junior College, Hanamkonda</strong><br>
+          10+2 (MPC) | 2018 – 2020 | 96.4%</li>
+          <li><strong>Zilla Parishad High School (ZPHS), Warangal</strong><br>
+          SSC | 2017 – 2018 | GPA: 9.0/10.0</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
       <h2 class="section-title">Technical Skills</h2>
       <div class="skill-grid">
-        <div class="skill"><i class="fa-brands fa-python"></i><div><strong>Python</strong><div class="small">Core & Libraries</div></div></div>
-        <div class="skill"><i class="fa-solid fa-cloud"></i><div><strong>AWS</strong><div class="small">Cloud Services</div></div></div>
-        <div class="skill"><i class="fa-solid fa-database"></i><div><strong>SQL</strong><div class="small">Database Management</div></div></div>
-        <div class="skill"><i class="fa-solid fa-brain"></i><div><strong>Machine Learning</strong><div class="small">Scikit-learn, Pandas</div></div></div>
-        <div class="skill"><i class="fa-solid fa-code"></i><div><strong>Flask</strong><div class="small">Web Framework</div></div></div>
-        <div class="skill"><i class="fa-solid fa-robot"></i><div><strong>UiPath</strong><div class="small">RPA & Automation</div></div></div>
+        <div class="skill"><i class="fa-solid fa-code"></i><div><strong>Programming</strong><br>Python, Java</div></div>
+        <div class="skill"><i class="fa-solid fa-globe"></i><div><strong>Web Technologies</strong><br>HTML (Basic), CSS (Basic)</div></div>
+        <div class="skill"><i class="fa-solid fa-database"></i><div><strong>Database</strong><br>SQL</div></div>
+        <div class="skill"><i class="fa-solid fa-brain"></i><div><strong>Machine Learning</strong><br>TensorFlow, NumPy, Pandas, OpenCV, ANN, CNN</div></div>
+        <div class="skill"><i class="fa-solid fa-cloud"></i><div><strong>Cloud</strong><br>AWS EC2, S3, VPC, CloudWatch</div></div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
+    <section>
       <h2 class="section-title">Projects</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Traffic Sign Detection System</h3>
-          <p>Developed a machine learning project using CNN to detect and classify traffic signs with GUI integration for real-time testing.</p>
-          <img src="results_traffic_sign/gradio_gui_output.jpg" alt="Traffic Sign Detection — GUI" class="project-thumb">
-        </div>
-
-        <div class="card">
-          <h3>Cloud-Based Chatbot</h3>
-          <p>Built a cloud-hosted chatbot using AWS Lambda and DynamoDB that answers user queries and adapts responses based on interactions.</p>
-        </div>
+      <div class="card">
+        <p><strong>Traffic Sign Detection & Recognition using ResNet</strong> (July 2023 – March 2024)<br>
+        • Built a CNN using ResNet to detect and classify traffic signs with 98% accuracy.<br>
+        • Deployed a real-time detection interface using Gradio.</p>
+      </div>
+      <div class="card">
+        <p><strong>Automated Attendance System using Face Recognition</strong> (August 2022 – April 2023)<br>
+        • Developed a real-time face recognition system with 97% accuracy.<br>
+        • Created a user-friendly GUI for attendance tracking.</p>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2 class="section-title">Contact</h2>
-      <div class="contact-row">
-        <div class="pill"><i class="fa-solid fa-envelope"></i>jagadeeshabommala@gmail.com</div>
-        <div class="pill"><i class="fa-solid fa-phone"></i>+91 93913 82916</div>
-        <div class="pill"><i class="fa-solid fa-location-dot"></i>Hyderabad, Telangana</div>
+    <section>
+      <h2 class="section-title">Certifications</h2>
+      <div class="card">
+        <ul>
+          <li>AWS re/Start Cloud Computing Program – Tech Mahindra Foundation</li>
+          <li>Java Full Stack Development – Wipro Talent Next</li>
+          <li>Introduction to Machine Learning – Swayam NPTEL</li>
+          <li>Team Motivation and Mentorship</li>
+          <li>Effective Interpersonal Communication</li>
+        </ul>
       </div>
     </section>
 
-    <footer>© 2025 Bommala Jagadeesha | Portfolio</footer>
+    <section>
+      <h2 class="section-title">Strengths</h2>
+      <div class="card">
+        <ul>
+          <li>Team Motivation and Mentorship</li>
+          <li>Effective Communication Skills</li>
+          <li>Adaptability and Problem Solving</li>
+          <li>Continuous Learning Mindset</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Bommala Jagadeesha · All Rights Reserved
+    </footer>
+
   </div>
 </body>
 </html>
