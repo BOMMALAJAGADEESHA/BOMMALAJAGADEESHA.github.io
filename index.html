@@ -1,337 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BOMMALA JAGADEESHA — Portfolio</title>
-
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bommala Jagadeesha | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    :root {
-      --bg:#f3f6f9;
-      --card:#ffffff;
-      --muted:#6b7280;
-      --accent-1:#4a6fa5;
-      --accent-2:#7fb3d5;
-      --maxw:1100px;
-      --radius:12px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-      background: linear-gradient(180deg,#eef6fb 0%, #f3f6f9 100%);
-      color:#0f1724;
-      line-height:1.5;
-    }
+  :root {
+    --bg1: #e8f0ff;
+    --bg2: #f9faff;
+    --card: #ffffff;
+    --muted: #5b6470;
+    --accent-1: #4b6cb7;
+    --accent-2: #182848;
+    --accent-3: #8e9fff;
+    --maxw: 1100px;
+    --radius: 12px;
+  }
 
-    /* NAV */
-    .nav {
-      position:fixed; left:0; right:0; top:16px;
-      display:flex; justify-content:center; z-index:60;
-      pointer-events:none;
-    }
-    .nav-inner{
-      background: rgba(255,255,255,0.85);
-      border-radius:999px;
-      padding:8px 14px;
-      box-shadow: 0 6px 20px rgba(49,64,83,0.08);
-      pointer-events:auto;
-      backdrop-filter: blur(6px);
-    }
-    .nav-inner a{
-      color:var(--accent-1);
-      text-decoration:none;
-      margin:0 10px;
-      font-weight:600;
-      font-size:0.95rem;
-      padding:6px 8px;
-      transition: color .18s, transform .12s;
-    }
-    .nav-inner a:hover{ color: var(--accent-2); transform:translateY(-2px) }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body {
+    font-family: Inter, system-ui, "Segoe UI", Roboto;
+    background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+    color:#0f1724;
+    line-height:1.6;
+  }
 
-    .container{max-width:var(--maxw); margin:0 auto; padding:28px 20px 80px;}
+  /* NAV */
+  .nav {
+    position:fixed; left:0; right:0; top:16px;
+    display:flex; justify-content:center; z-index:60;
+    pointer-events:none;
+  }
+  .nav-inner {
+    background: rgba(255,255,255,0.9);
+    border-radius:999px;
+    padding:10px 20px;
+    box-shadow: 0 6px 25px rgba(49,64,83,0.15);
+    pointer-events:auto;
+    backdrop-filter: blur(8px);
+  }
+  .nav-inner a {
+    color:var(--accent-1);
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:600;
+    font-size:0.95rem;
+    padding:6px 10px;
+    transition: color .18s, transform .12s;
+  }
+  .nav-inner a:hover {
+    color: var(--accent-3);
+    transform:translateY(-2px);
+  }
 
-    /* HERO */
-    .hero{
-      display:grid;
-      grid-template-columns: 200px 1fr;
-      gap:28px;
-      align-items:center;
-      padding:44px 20px;
-      margin-top:28px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.85));
-      border-radius: var(--radius);
-      box-shadow: 0 8px 30px rgba(16,24,40,0.06);
-      border: 1px solid rgba(11,22,40,0.03);
+  .container {
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:28px 20px 80px;
+  }
+
+  /* HERO */
+  .hero {
+    display:grid;
+    grid-template-columns: 200px 1fr;
+    gap:28px;
+    align-items:center;
+    padding:44px 24px;
+    margin-top:70px;
+    background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(240,245,255,0.95));
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(50,60,120,0.15);
+  }
+  .avatar {
+    width:180px; height:180px; border-radius:20px; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+    background: linear-gradient(135deg,var(--accent-1),var(--accent-3));
+    border: 4px solid rgba(255,255,255,0.9);
+    box-shadow: 0 0 25px rgba(75,108,183,0.25);
+  }
+  .avatar img { width:100%; height:100%; object-fit:cover; display:block; }
+
+  .hero-meta h1 {
+    margin:0;
+    font-size:1.9rem;
+    color:#0b1220;
+  }
+  .role { margin-top:8px; color:var(--muted); font-weight:600; }
+  .contact-line { margin-top:12px; color:#1f2937; font-size:0.95rem; }
+
+  .cta-row {
+    display:flex; gap:10px; margin-top:16px; flex-wrap:wrap;
+  }
+  .btn {
+    display:inline-flex; align-items:center; gap:10px;
+    background: linear-gradient(90deg,var(--accent-1),var(--accent-3));
+    color:white; padding:10px 16px;
+    border-radius:10px; text-decoration:none;
+    font-weight:700; font-size:0.95rem;
+    box-shadow: 0 6px 20px rgba(75,108,183,0.3);
+    transition: transform .15s;
+  }
+  .btn:hover { transform:translateY(-2px); }
+
+  .btn-ghost {
+    background:transparent;
+    border:2px solid var(--accent-1);
+    color:var(--accent-1);
+    padding:10px 16px;
+    border-radius:10px;
+    font-weight:600;
+    text-decoration:none;
+    transition: all .2s ease;
+  }
+  .btn-ghost:hover {
+    background: linear-gradient(90deg,var(--accent-1),var(--accent-3));
+    color:white;
+    box-shadow: 0 4px 15px rgba(75,108,183,0.25);
+  }
+
+  .intro {
+    margin-top:16px;
+    padding:12px;
+    background: linear-gradient(90deg, rgba(75,108,183,0.07), rgba(142,159,255,0.07));
+    border-radius:10px;
+    color:#0f1724;
+  }
+
+  section { margin-top:40px; }
+  h2.section-title {
+    color:var(--accent-1);
+    font-size:1.35rem;
+    margin-bottom:12px;
+    position:relative;
+  }
+  h2.section-title::after {
+    content:"";
+    display:block;
+    width:50px;
+    height:3px;
+    background: linear-gradient(90deg,var(--accent-1),var(--accent-3));
+    margin-top:6px;
+    border-radius:3px;
+  }
+
+  .grid {
+    display:grid; gap:18px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .card {
+    background: var(--card);
+    padding:18px;
+    border-radius:14px;
+    box-shadow: 0 8px 20px rgba(75,108,183,0.08);
+    border: 1px solid rgba(15,23,36,0.05);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(75,108,183,0.18);
+  }
+
+  .skill-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+    gap:12px;
+  }
+  .skill {
+    display:flex; gap:12px; align-items:center;
+    padding:10px;
+    border-radius:10px;
+    background: linear-gradient(180deg,#ffffff,#f3f5ff);
+    border:1px solid rgba(11,22,40,0.05);
+    box-shadow: 0 4px 10px rgba(75,108,183,0.05);
+  }
+  .skill i {
+    font-size:1.4rem;
+    color:var(--accent-1);
+    width:36px;
+    text-align:center;
+  }
+
+  .project-thumb {
+    width:100%;
+    max-width:380px;
+    height:auto;
+    display:block;
+    margin:10px auto;
+    border-radius:12px;
+    box-shadow: 0 6px 20px rgba(75,108,183,0.15);
+  }
+
+  .contact-row {
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    align-items:center;
+    margin-top:8px;
+  }
+  .pill {
+    background:rgba(75,108,183,0.08);
+    padding:10px 12px;
+    border-radius:999px;
+    color:#0f1724;
+    font-weight:600;
+    border:1px solid rgba(75,108,183,0.15);
+  }
+  .pill i { margin-right:6px; }
+
+  footer {
+    margin-top:36px;
+    padding:18px;
+    text-align:center;
+    color:var(--muted);
+    font-size:0.95rem;
+  }
+
+  @media (max-width:880px) {
+    .hero {
+      grid-template-columns: 1fr;
+      text-align:center;
+      gap:18px;
+      padding:28px;
     }
-
     .avatar {
-      width:180px; height:180px; border-radius:16px; overflow:hidden;
-      display:flex; align-items:center; justify-content:center;
-      background: linear-gradient(135deg,var(--accent-1),var(--accent-2));
-      border: 4px solid rgba(255,255,255,0.8);
+      width:140px; height:140px;
+      margin:0 auto;
     }
-    .avatar img{ width:100%; height:100%; object-fit:cover; display:block }
-
-    .hero-meta h1{ margin:0; font-size:1.8rem; color:#0b1220; letter-spacing:0.6px; }
-    .role { margin-top:8px; color:var(--muted); font-weight:600; }
-    .contact-line { margin-top:12px; color:#1f2937; font-size:0.95rem; }
-
-    .cta-row{ display:flex; gap:10px; margin-top:16px; flex-wrap:wrap }
-    .btn {
-      display:inline-flex; align-items:center; gap:10px;
-      background: linear-gradient(90deg,var(--accent-1),var(--accent-2));
-      color:white; padding:10px 14px; border-radius:10px;
-      text-decoration:none; font-weight:700; font-size:0.95rem;
-      box-shadow: 0 8px 20px rgba(79,70,229,0.08);
-    }
-    .btn-ghost {
-      background:transparent; border:1px solid rgba(15,23,36,0.06);
-      color:var(--accent-1); padding:10px 14px; border-radius:10px; font-weight:600;
-      text-decoration:none;
-    }
-    .btn-ghost:hover {
-      background: rgba(74,111,165,0.08);
-      color: var(--accent-2);
-      border-color: rgba(74,111,165,0.2);
-    }
-
-    .intro {
-      margin-top:16px;
-      padding:12px;
-      background: linear-gradient(90deg, rgba(74,111,165,0.06), rgba(127,179,213,0.04));
-      border-radius:10px;
-      color:#0f1724;
-    }
-
-    section{ margin-top:28px }
-    .section-head{ display:flex; align-items:center; gap:12px; margin-bottom:12px }
-    h2.section-title { margin:0; color:var(--accent-1); font-size:1.25rem; }
-
-    .grid{
-      display:grid; gap:16px;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
-
-    .card {
-      background: var(--card);
-      padding:16px;
-      border-radius:12px;
-      box-shadow: 0 6px 18px rgba(15,23,36,0.04);
-      border: 1px solid rgba(15,23,36,0.03);
-      transition: transform .22s ease, box-shadow .22s ease;
-    }
-    .card:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.08) }
-
-    .small { color:#475569; font-size:0.92rem; margin-bottom:8px; }
-
-    .skill-grid{ display:grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap:12px }
-    .skill {
-      display:flex; gap:12px; align-items:center;
-      padding:10px; border-radius:10px; background: linear-gradient(180deg,#ffffff,#fbfdff);
-      border:1px solid rgba(11,22,40,0.02);
-    }
-    .skill i{ font-size:1.4rem; color:var(--accent-1); width:36px; text-align:center }
-
-    .contact-row{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:8px }
-    .pill{ background:rgba(10,20,36,0.03); padding:10px 12px; border-radius:999px; color:#0f1724; font-weight:600; border:1px solid rgba(15,23,36,0.04) }
-
-    footer{ margin-top:36px; padding:18px; text-align:center; color:var(--muted); font-size:0.95rem }
-
-    @media (max-width:880px){
-      .hero{ grid-template-columns: 1fr; text-align:center; gap:18px; padding:28px }
-      .avatar{ width:140px; height:140px; margin:0 auto }
-      .hero-meta{ order:2 }
-      .container{ padding:20px }
-    }
+  }
   </style>
 </head>
-<body>
 
-  <div class="nav">
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
     <div class="nav-inner">
       <a href="#about">About</a>
-      <a href="#education">Education</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#internships">Internships</a>
-      <a href="#certs">Certificates</a>
       <a href="#contact">Contact</a>
     </div>
-  </div>
+  </nav>
 
-  <main class="container" id="top">
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="avatar"><img src="photo.jpg" alt="Bommala Jagadeesha"></div>
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+      <div class="avatar">
+        <img src="profile.jpg" alt="Bommala Jagadeesha">
+      </div>
       <div class="hero-meta">
-        <h1 id="typed-name">BOMMALA JAGADEESHA</h1>
-        <div class="role">Software Engineer | Python & Cloud Computing Enthusiast</div>
-        <div class="contact-line">
-          Hyderabad, Telangana · 
-          <span style="color:var(--accent-1);font-weight:600;">+91 93913 82916</span> · 
-          <a href="mailto:jagadeeshabommala@gmail.com" style="color:var(--accent-1);text-decoration:none;font-weight:600;">jagadeeshabommala@gmail.com</a>
-        </div>
+        <h1>Bommala Jagadeesha</h1>
+        <div class="role">Software Engineer | Python & Cloud Enthusiast | AI & ML Graduate</div>
+        <div class="contact-line">Hyderabad, Telangana · +91 93913 82916 · jagadeeshabommala@gmail.com</div>
         <div class="cta-row">
-          <a class="btn" href="resume.pdf" download><i class="fa-solid fa-download"></i>Download Resume</a>
-          <a class="btn-ghost" href="https://github.com/BOMMALAJAGADEESHA" target="_blank">GitHub</a>
-          <a class="btn-ghost" href="https://linkedin.com/in/jagadeeshabommala" target="_blank">LinkedIn</a>
+          <a href="https://linkedin.com" class="btn"><i class="fab fa-linkedin"></i>LinkedIn</a>
+          <a href="https://github.com" class="btn-ghost"><i class="fab fa-github"></i>GitHub</a>
         </div>
-        <div class="intro">
-          B.Tech graduate in AI & ML skilled in Python, Machine Learning, and AWS Cloud. Passionate about building intelligent solutions and deploying scalable cloud applications.
-        </div>
+        <p class="intro">
+          B.Tech graduate specialized in Artificial Intelligence & Machine Learning. Passionate about
+          developing intelligent systems, scalable applications, and exploring cutting-edge technologies
+          in Python, Cloud, and AI.
+        </p>
       </div>
     </section>
 
-    <!-- EDUCATION -->
-    <section id="education">
-      <div class="section-head"><h2 class="section-title">Education</h2></div>
-      <div class="grid">
-        <div class="card"><strong>Kakatiya Institute of Technology & Science, Warangal</strong><div class="small">B.Tech in AI & ML (2020–2024) · CGPA: 8.39/10</div></div>
-        <div class="card"><strong>RD Junior College, Hanamkonda</strong><div class="small">10+2 (MPC) · 2018–2020 · 96.4%</div></div>
-        <div class="card"><strong>Zilla Parishad High School, Warangal</strong><div class="small">SSC · 2017–2018 · GPA: 9.0/10</div></div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
+    <!-- Skills Section -->
     <section id="skills">
-      <div class="section-head"><h2 class="section-title">Technical Skills</h2></div>
+      <h2 class="section-title">Technical Skills</h2>
       <div class="skill-grid">
-        <div class="skill"><i class="fa-brands fa-python"></i><div><strong>Python</strong><div class="small">Scripting, ML Libraries</div></div></div>
-        <div class="skill"><i class="fa-brands fa-java"></i><div><strong>Java</strong><div class="small">OOP Basics</div></div></div>
-        <div class="skill"><i class="fa-solid fa-code"></i><div><strong>Web</strong><div class="small">HTML & CSS (Basics)</div></div></div>
-        <div class="skill"><i class="fa-solid fa-database"></i><div><strong>SQL</strong><div class="small">Database Queries</div></div></div>
-        <div class="skill"><i class="fa-solid fa-brain"></i><div><strong>AI & ML</strong><div class="small">TensorFlow, OpenCV, ANN, CNN</div></div></div>
-        <div class="skill"><i class="fa-solid fa-cloud"></i><div><strong>AWS</strong><div class="small">EC2, S3, VPC, CloudWatch</div></div></div>
+        <div class="skill"><i class="fa-brands fa-python"></i><div><strong>Python</strong><div class="small">Core & Libraries</div></div></div>
+        <div class="skill"><i class="fa-solid fa-cloud"></i><div><strong>AWS</strong><div class="small">Cloud Services</div></div></div>
+        <div class="skill"><i class="fa-solid fa-database"></i><div><strong>SQL</strong><div class="small">Database Management</div></div></div>
+        <div class="skill"><i class="fa-solid fa-brain"></i><div><strong>Machine Learning</strong><div class="small">Scikit-learn, Pandas</div></div></div>
+        <div class="skill"><i class="fa-solid fa-code"></i><div><strong>Flask</strong><div class="small">Web Framework</div></div></div>
+        <div class="skill"><i class="fa-solid fa-robot"></i><div><strong>UiPath</strong><div class="small">RPA & Automation</div></div></div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-<section id="projects" class="card-section" aria-labelledby="projects-heading">
-  <div class="section-head"><h2 class="section-title" id="projects-heading">Key Projects</h2></div>
-
-  <div class="grid">
-    <article class="card" aria-labelledby="p1">
-      <div class="small">Jul 2023 – Apr 2024</div>
-      <h3 id="p1">Traffic Sign Detection & Recognition (ResNet)</h3>
-      <!-- GUI screenshot -->
-      <img src="results_traffic_sign/gradio_gui_output.jpg" alt="Traffic Sign Detection — GUI" class="project-thumb" style="max-width:100%; height:auto; border-radius:10px;">
-
-      <p>
-        Built a ResNet-based CNN to detect and classify traffic signs from the GTSRB dataset (32,635 images). 
-        Handled lighting & perspective variations, used augmentation and transfer learning, and tuned 
-        hyperparameters to reach <strong>98% accuracy</strong>. Deployed a real-time demo with Gradio for validation.
-      </p>
-      <div class="small" style="margin-top:8px">
-        Tech: Python · TensorFlow · Keras · OpenCV · scikit-learn · Gradio
-      </div>
-
-      <!-- 🔗 Add your links here -->
-      <p style="margin-top:10px">
-        <a href="https://colab.research.google.com/drive/1G69WhFLuZ-C2pEEEF6oCMiVX8FLGfEr5?usp=sharing" 
-        target="_blank" rel="noopener">🔗 View on Google Colab</a> ·<br>
-        <a href="https://github.com/BOMMALAJAGADEESHA/Traffic-Sign-Detection-ResNet" 
-        target="_blank" rel="noopener">🔗 View GitHub Repo</a>
-      </p>
-    </article>
-  </div>
-</section>
-
-
-    <!-- INTERNSHIPS -->
-    <section id="internships">
-      <div class="section-head"><h2 class="section-title">Internships</h2></div>
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
       <div class="grid">
         <div class="card">
-          <strong>Cisco Networking Academy — Virtual Internship</strong>
-          <div class="small">Jun 2023 – Aug 2023</div>
-          <p class="small">Configured and troubleshot routers/switches using Cisco Packet Tracer; gained practical networking experience.</p>
+          <h3>Traffic Sign Detection System</h3>
+          <p>Developed a machine learning project using CNN to detect and classify traffic signs with GUI integration for real-time testing.</p>
+          <img src="results_traffic_sign/gradio_gui_output.jpg" alt="Traffic Sign Detection — GUI" class="project-thumb">
+        </div>
+
+        <div class="card">
+          <h3>Cloud-Based Chatbot</h3>
+          <p>Built a cloud-hosted chatbot using AWS Lambda and DynamoDB that answers user queries and adapts responses based on interactions.</p>
         </div>
       </div>
     </section>
 
-    <!-- CERTIFICATIONS -->
-    <section id="certs">
-      <div class="section-head"><h2 class="section-title">Certifications</h2></div>
-      <div class="grid">
-        <div class="card"><strong>AWS re/Start Cloud Computing</strong><div class="small">Tech Mahindra Foundation</div></div>
-        <div class="card"><strong>Java Full Stack Development</strong><div class="small">Wipro TalentNext</div></div>
-        <div class="card"><strong>Introduction to Machine Learning</strong><div class="small">Swayam NPTEL</div></div>
-      </div>
-    </section>
-
-    <!-- STRENGTHS -->
-    <section id="strengths">
-      <div class="section-head"><h2 class="section-title">Strengths</h2></div>
-      <div class="grid">
-        <div class="card"><strong>Team Motivation</strong><p class="small">Encouraging collaboration & positive environment.</p></div>
-        <div class="card"><strong>Mentorship</strong><p class="small">Guide peers to learn and grow together.</p></div>
-        <div class="card"><strong>Communication</strong><p class="small">Effective and clear interpersonal skills.</p></div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
+    <!-- Contact Section -->
     <section id="contact">
-      <div class="section-head"><h2 class="section-title">Contact</h2></div>
-      <div class="card">
-        <div class="contact-row">
-          <a href="https://www.google.com/maps/search/?api=1&query=Hyderabad,+Telangana" class="pill" target="_blank"><i class="fa-solid fa-location-dot"></i> Hyderabad, Telangana</a>
-          <a href="tel:+919391382916" class="pill"><i class="fa-solid fa-phone"></i> +91 93913 82916</a>
-          <a href="mailto:jagadeeshabommala@gmail.com" class="pill" style="color:var(--accent-1)"><i class="fa-regular fa-envelope"></i> jagadeeshabommala@gmail.com</a>
-        </div>
-      </div>
-      <div style="margin-top:14px" class="small">
-        GitHub: <a href="https://github.com/BOMMALAJAGADEESHA" target="_blank" style="color:var(--accent-1)">github.com/BOMMALAJAGADEESHA</a> ·
-        LinkedIn: <a href="https://linkedin.com/in/jagadeeshabommala" target="_blank" style="color:var(--accent-1)">linkedin.com/in/jagadeeshabommala</a>
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-row">
+        <div class="pill"><i class="fa-solid fa-envelope"></i>jagadeeshabommala@gmail.com</div>
+        <div class="pill"><i class="fa-solid fa-phone"></i>+91 93913 82916</div>
+        <div class="pill"><i class="fa-solid fa-location-dot"></i>Hyderabad, Telangana</div>
       </div>
     </section>
 
-    <footer>
-      © 2025 BOMMALA JAGADEESHA · Designed & Developed by BOMMALA JAGADEESHA · 
-      <a href="resume.pdf" style="color:var(--accent-1)" download>Download CV</a>
-    </footer>
-  </main>
-
-  <!-- JS for typing effect & fade-ins -->
-  <script>
-    // Typing animation
-    (function(){
-      const el = document.getElementById("typed-name");
-      const text = el.textContent.trim();
-      el.textContent = "";
-      let i = 0;
-      function type(){
-        if(i < text.length){
-          el.textContent += text.charAt(i++);
-          setTimeout(type, 60);
-        }
-      }
-      type();
-    })();
-
-    // Fade-in on scroll
-    (function(){
-      const obs = new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{
-          if(e.isIntersecting){
-            e.target.style.transform="translateY(0)";
-            e.target.style.opacity=1;
-            obs.unobserve(e.target);
-          }
-        });
-      },{threshold:0.12});
-      document.querySelectorAll('.card,.skill,.avatar').forEach(el=>{
-        el.style.opacity=0;
-        el.style.transform="translateY(18px)";
-        el.style.transition="opacity .6s ease, transform .6s ease";
-        obs.observe(el);
-      });
-    })();
-  </script>
+    <footer>© 2025 Bommala Jagadeesha | Portfolio</footer>
+  </div>
 </body>
 </html>
