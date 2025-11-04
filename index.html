@@ -1,196 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Bommala Jagadeesha | Portfolio</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-:root {
-  --bg1: #eef3ff;
-  --bg2: #f9faff;
-  --card: #ffffff;
-  --accent-1: #4b6cb7;
-  --accent-2: #182848;
-  --accent-3: #8e9fff;
-  --radius: 12px;
-  --maxw: 1100px;
-  --muted: #475569;
-}
-* { box-sizing: border-box; margin:0; padding:0; }
-body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
-  color: #0f1724;
-  line-height: 1.6;
-}
-.container {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 40px 20px 80px;
-}
-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-header h1 {
-  font-size: 2rem;
-  color: var(--accent-2);
-}
-header .role {
-  color: var(--accent-1);
-  font-weight: 600;
-  margin-top: 6px;
-}
-.contact {
-  margin-top: 12px;
-  font-size: 0.95rem;
-  color: var(--muted);
-}
-section {
-  margin-top: 40px;
-}
-h2.section-title {
-  color: var(--accent-1);
-  font-size: 1.3rem;
-  margin-bottom: 12px;
-  position: relative;
-}
-h2.section-title::after {
-  content:"";
-  display:block;
-  width:60px;
-  height:3px;
-  background: linear-gradient(90deg,var(--accent-1),var(--accent-3));
-  border-radius:3px;
-  margin-top:5px;
-}
-.card {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 18px 20px;
-  box-shadow: 0 6px 16px rgba(75,108,183,0.1);
-  margin-bottom: 18px;
-}
-ul { margin-left:20px; margin-top:8px; }
-li { margin-bottom:6px; }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BOMMALA JAGADEESHA — Portfolio</title>
 
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12px;
-}
-.skill {
-  background: linear-gradient(180deg,#ffffff,#f3f5ff);
-  border-radius:10px;
-  border:1px solid rgba(11,22,40,0.05);
-  box-shadow: 0 4px 10px rgba(75,108,183,0.08);
-  padding:10px 12px;
-  display:flex; gap:12px; align-items:center;
-}
-.skill i {
-  color: var(--accent-1);
-  font-size:1.3rem;
-  width:30px;
-  text-align:center;
-}
-footer {
-  margin-top: 40px;
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-@media (max-width:800px) {
-  .container { padding: 20px; }
-}
-</style>
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f3f6f9;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent-1:#4a6fa5; /* calm blue */
+      --accent-2:#7fb3d5; /* soft teal */
+      --glass: rgba(255,255,255,0.6);
+      --maxw:1100px;
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(180deg,#eef6fb 0%, #f3f6f9 100%);
+      color:#0f1724;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* NAV */
+    .nav {
+      position:fixed; left:0; right:0; top:16px;
+      display:flex; justify-content:center; z-index:60;
+      pointer-events:none;
+    }
+    .nav-inner{
+      background: rgba(255,255,255,0.85);
+      border-radius:999px;
+      padding:8px 14px;
+      box-shadow: 0 6px 20px rgba(49,64,83,0.08);
+      pointer-events:auto;
+      backdrop-filter: blur(6px);
+    }
+    .nav-inner a{
+      color:var(--accent-1);
+      text-decoration:none;
+      margin:0 10px;
+      font-weight:600;
+      font-size:0.95rem;
+      padding:6px 8px;
+      transition: color .18s, transform .12s;
+    }
+    .nav-inner a:hover{ color: var(--accent-2); transform:translateY(-2px) }
+
+    /* PAGE CONTAINER */
+    .container{max-width:var(--maxw); margin:0 auto; padding:28px 20px 80px;}
+
+    /* HERO */
+    .hero{
+      display:grid;
+      grid-template-columns: 200px 1fr;
+      gap:28px;
+      align-items:center;
+      padding:44px 20px;
+      margin-top:28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.85));
+      border-radius: var(--radius);
+      box-shadow: 0 8px 30px rgba(16,24,40,0.06);
+      border: 1px solid rgba(11,22,40,0.03);
+    }
+
+    .avatar {
+      width:180px; height:180px; border-radius:16px; overflow:hidden;
+      display:flex; align-items:center; justify-content:center;
+      background: linear-gradient(135deg,var(--accent-1),var(--accent-2));
+      border: 4px solid rgba(255,255,255,0.8);
+    }
+    .avatar img{ width:100%; height:100%; object-fit:cover; display:block }
+
+    .hero-meta h1{ margin:0; font-size:1.8rem; color:#0b1220; letter-spacing:0.6px; }
+    .role { margin-top:8px; color:var(--muted); font-weight:600; }
+    .contact-line { margin-top:12px; color:#1f2937; font-size:0.95rem; }
+
+    .cta-row{ display:flex; gap:10px; margin-top:16px; flex-wrap:wrap }
+    .btn {
+      display:inline-flex; align-items:center; gap:10px;
+      background: linear-gradient(90deg,var(--accent-1),var(--accent-2));
+      color:white; padding:10px 14px; border-radius:10px;
+      text-decoration:none; font-weight:700; font-size:0.95rem;
+      box-shadow: 0 8px 20px rgba(79,70,229,0.08);
+    }
+    .btn-ghost {
+      background:transparent; border:1px solid rgba(15,23,36,0.06);
+      color:var(--accent-1); padding:10px 14px; border-radius:10px; font-weight:600;
+      text-decoration:none;
+    }
+
+    .intro {
+      margin-top:16px;
+      padding:12px;
+      background: linear-gradient(90deg, rgba(74,111,165,0.06), rgba(127,179,213,0.04));
+      border-radius:10px;
+      color:#0f1724;
+    }
+
+    /* SECTIONS */
+    section{ margin-top:28px }
+    .section-head{ display:flex; align-items:center; gap:12px; margin-bottom:12px }
+    h2.section-title { margin:0; color:var(--accent-1); font-size:1.25rem; }
+
+    .grid{
+      display:grid; gap:16px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .card {
+      background: var(--card);
+      padding:16px;
+      border-radius:12px;
+      box-shadow: 0 6px 18px rgba(15,23,36,0.04);
+      border: 1px solid rgba(15,23,36,0.03);
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .card:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.08) }
+
+    .small { color:var(--muted); font-size:0.92rem; margin-bottom:8px; }
+
+    /* Projects images */
+    .project-thumb{ width:100%; height:160px; object-fit:cover; border-radius:8px; margin-bottom:10px; display:block; transition: transform .28s ease }
+    .project-thumb:hover{ transform: scale(1.03) }
+
+    /* SKILLS */
+    .skill-grid{ display:grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap:12px }
+    .skill {
+      display:flex; gap:12px; align-items:center;
+      padding:10px; border-radius:10px; background: linear-gradient(180deg,#ffffff,#fbfdff);
+      border:1px solid rgba(11,22,40,0.02);
+    }
+    .skill i{ font-size:1.4rem; color:var(--accent-1); width:36px; text-align:center }
+
+    /* CONTACT */
+    .contact-row{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:8px }
+    .pill{ background:rgba(10,20,36,0.03); padding:10px 12px; border-radius:999px; color:#0f1724; font-weight:600; border:1px solid rgba(15,23,36,0.04) }
+
+    footer{ margin-top:36px; padding:18px; text-align:center; color:var(--muted); font-size:0.95rem }
+
+    /* small screens */
+    @media (max-width:880px){
+      .hero{ grid-template-columns: 1fr; text-align:center; gap:18px; padding:28px }
+      .avatar{ width:140px; height:140px; margin:0 auto }
+      .hero-meta{ order:2 }
+      .container{ padding:20px }
+    }
+
+  </style>
 </head>
 <body>
-  <div class="container">
 
-    <header>
-      <h1>Bommala Jagadeesha</h1>
-      <div class="role">Software Engineer | Python & Cloud Computing Enthusiast | AI & ML Graduate</div>
-      <div class="contact">
-        Hyderabad, Telangana · +91 93913 82916 · jagadeeshabommala@gmail.com · LinkedIn · Portfolio
+  <!-- NAV -->
+  <div class="nav" aria-hidden="false">
+    <div class="nav-inner" role="navigation" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#internships">Internships</a>
+      <a href="#certs">Certificates</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <main class="container" id="top">
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <div class="hero-card" aria-hidden="true">
+        <div class="avatar" title="Profile photo">
+          <!-- upload your image named your-photo.jpg to repo root -->
+          <img src="photo.jpg" alt="BOMMALA JAGADEESHA — Profile photo">
+        </div>
       </div>
-    </header>
 
-    <section>
-      <h2 class="section-title">Career Objective</h2>
-      <div class="card">
-        <p>B.Tech graduate in AI & ML skilled in Python, Machine Learning, and AWS Cloud. Passionate about building intelligent solutions and deploying scalable cloud applications.</p>
+      <div class="hero-meta" style="padding-right:6px;">
+        <h1 id="typed-name" style="margin-bottom:6px;">BOMMALA JAGADEESHA</h1>
+        <div class="role">Cloud and AI/ML Graduate</div>
+
+        <div class="contact-line">
+          <span class="small">Warangal, Telangana, India</span> &nbsp;·&nbsp;
+          <span style="color:var(--accent-1); font-weight:600">+91 93913 82916</span> &nbsp;·&nbsp;
+          <a href="mailto:jagadeeshabommala@gmail.com" style="color:var(--accent-1); text-decoration:none; font-weight:600">jagadeeshabommala@gmail.com</a>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn" href="resume.pdf" download><i class="fa-solid fa-download"></i> Download Resume</a>
+          <a class="btn-ghost" href="https://github.com/BOMMALAJAGADEESHA" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn-ghost" href="https://linkedin.com/in/jagadeeshabommala" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+
+        <div class="intro">
+          As a fresher with a strong interest in AWS and Machine Learning, I am eager to apply my knowledge, work on real cloud projects, and continue developing my skills. I am motivated to join a team that values learning, innovation, and building practical technology solutions.
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2 class="section-title">Education</h2>
-      <div class="card">
-        <ul>
-          <li><strong>Kakatiya Institute of Technology and Science (KITSW), Warangal</strong><br>
-          B.Tech in AI & ML | 2020 – 2024 | CGPA: 8.39/10.00</li>
-          <li><strong>RD Junior College, Hanamkonda</strong><br>
-          10+2 (MPC) | 2018 – 2020 | 96.4%</li>
-          <li><strong>Zilla Parishad High School (ZPHS), Warangal</strong><br>
-          SSC | 2017 – 2018 | GPA: 9.0/10.0</li>
-        </ul>
+    <!-- EDUCATION -->
+    <section id="about" class="card-section" aria-labelledby="education-heading">
+      <div class="section-head"><h2 class="section-title" id="education-heading">Education</h2></div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="small">Kakatiya Institute of Technology and Sciences (KITSW), Warangal</div>
+          <strong>B.Tech in Computer Science Engineering (AI & ML)</strong>
+          <div class="small" style="margin-top:8px">Graduation: May 2024 · GPA: 8.39 / 10.00</div>
+          <div class="small" style="margin-top:8px">Relevant Coursework: Artificial Intelligence, Machine Learning</div>
+        </div>
+
+        <div class="card">
+          <div class="small">RD Junior College, Hanamkonda</div>
+          <strong>10+2 (MPC)</strong>
+          <div class="small" style="margin-top:8px">July 2020 · Percentage: 96.4%</div>
+
+          <hr style="border:none; height:10px; opacity:0">
+          <div class="small">Zilla Parishad High School (ZPHS), Warangal</div>
+          <strong>SSC (10th Standard)</strong>
+          <div class="small">2018 · GPA: 9.0 / 10.0</div>
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2 class="section-title">Technical Skills</h2>
+    <!-- PROJECTS -->
+    <section id="projects" class="card-section" aria-labelledby="projects-heading">
+      <div class="section-head"><h2 class="section-title" id="projects-heading">Key Projects</h2></div>
+
+      <div class="grid">
+        <article class="card" aria-labelledby="p1">
+        <div class="small">Jul 2023 – Apr 2024</div>
+        <h3 id="p1">Traffic Sign Detection & Recognition (ResNet)</h3>
+        <!-- GUI screenshot -->
+        <img src="results_traffic_sign/gradio_gui_output.jpg" alt="Traffic Sign Detection — GUI" class="project-thumb">
+    
+        <p>
+        Built a ResNet-based CNN to detect and classify traffic signs from the GTSRB dataset (32,635 images). 
+        Handled lighting & perspective variations, used augmentation and transfer learning, and tuned 
+        hyperparameters to reach <strong>98% accuracy</strong>. Deployed a real-time demo with Gradio for validation.
+        </p>
+        <div class="small" style="margin-top:8px">
+        Tech: Python · TensorFlow · Keras · OpenCV · scikit-learn · Gradio
+        </div>
+
+        <!-- 🔗 Add your links here -->
+        <p style="margin-top:10px">
+          <a href="https://colab.research.google.com/drive/1G69WhFLuZ-C2pEEEF6oCMiVX8FLGfEr5?usp=sharing" 
+          target="_blank" rel="noopener">🔗 View on Google Colab</a> ·<br>
+          <a href="https://github.com/BOMMALAJAGADEESHA/Traffic-Sign-Detection-ResNet" 
+          target="_blank" rel="noopener">🔗 View GitHub Repo</a>
+        </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="card-section" aria-labelledby="skills-heading">
+      <div class="section-head"><h2 class="section-title" id="skills-heading">Technical Skills</h2></div>
+
       <div class="skill-grid">
-        <div class="skill"><i class="fa-solid fa-code"></i><div><strong>Programming</strong><br>Python, Java</div></div>
-        <div class="skill"><i class="fa-solid fa-globe"></i><div><strong>Web Technologies</strong><br>HTML (Basic), CSS (Basic)</div></div>
-        <div class="skill"><i class="fa-solid fa-database"></i><div><strong>Database</strong><br>SQL</div></div>
-        <div class="skill"><i class="fa-solid fa-brain"></i><div><strong>Machine Learning</strong><br>TensorFlow, NumPy, Pandas, OpenCV, ANN, CNN</div></div>
-        <div class="skill"><i class="fa-solid fa-cloud"></i><div><strong>Cloud</strong><br>AWS EC2, S3, VPC, CloudWatch</div></div>
+        <div class="skill"><i class="fa-brands fa-python"></i><div><strong>Python</strong><div class="small">Scripting, ML libraries</div></div></div>
+        <div class="skill"><i class="fa-brands fa-java"></i><div><strong>Java</strong><div class="small">OOP & basics</div></div></div>
+        <div class="skill"><i class="fa-solid fa-robot"></i><div><strong>Web Technologies</strong><div class="small">HTML & CSS</div></div></div>
+        <div class="skill"><i class="fa-solid fa-database"></i><div><strong>SQL / MySQL</strong><div class="small">Queries & DB design</div></div></div>
+        <div class="skill"><i class="fa-solid fa-brain"></i><div><strong>ML Frameworks</strong><div class="small">TensorFlow · Keras · scikit-learn</div></div></div>
+        <div class="skill"><i class="fa-solid fa-network-wired"></i><div><strong>Deep Learning</strong><div class="small">ANN · CNN · RNN</div></div></div>
+        <div class="skill"><i class="fa-solid fa-cloud"></i><div><strong>AWS</strong><div class="small">EC2 · S3 · VPC · IAM · CloudWatch</div></div></div>
       </div>
     </section>
 
-    <section>
-      <h2 class="section-title">Projects</h2>
-      <div class="card">
-        <p><strong>Traffic Sign Detection & Recognition using ResNet</strong> (July 2023 – March 2024)<br>
-        • Built a CNN using ResNet to detect and classify traffic signs with 98% accuracy.<br>
-        • Deployed a real-time detection interface using Gradio.</p>
-      </div>
-      <div class="card">
-        <p><strong>Automated Attendance System using Face Recognition</strong> (August 2022 – April 2023)<br>
-        • Developed a real-time face recognition system with 97% accuracy.<br>
-        • Created a user-friendly GUI for attendance tracking.</p>
+    <!-- INTERNSHIPS -->
+    <section id="internships" class="card-section" aria-labelledby="internships-heading">
+      <div class="section-head"><h2 class="section-title" id="internships-heading">Internships</h2></div>
+
+      <div class="list">
+        <div class="item card">
+          <strong>Data Science & Cloud Solutions Intern — 3Cortex, Hyderabad</strong>
+          <div class="small">Jul 2022 – Aug 2022</div>
+          <p class="small">Analyzed year-long business data to support forecasting, detected anomalies, created reports, and worked on cloud data pipelines.</p>
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2 class="section-title">Certifications</h2>
-      <div class="card">
-        <ul>
-          <li>AWS re/Start Cloud Computing Program – Tech Mahindra Foundation</li>
-          <li>Java Full Stack Development – Wipro Talent Next</li>
-          <li>Introduction to Machine Learning – Swayam NPTEL</li>
-          <li>Team Motivation and Mentorship</li>
-          <li>Effective Interpersonal Communication</li>
-        </ul>
+    <!-- CERTIFICATES -->
+    <section id="certs" class="card-section" aria-labelledby="certs-heading">
+      <div class="section-head"><h2 class="section-title" id="certs-heading">Certifications & Training</h2></div>
+
+      <div class="grid">
+        <div class="card"><strong>AWS re/Start Program</strong><div class="small">Tech Mahindra Foundation (Apr 2025 – Jul 2025)</div></div>
+        <div class="card"><strong>Java Full Stack Development</strong><div class="small">Wipro TalentNext (May 2023 – Sep 2023)</div></div>
+        <div class="card"><strong>Introduction to Machine Learning</strong><div class="small">Swayam NPTEL (Jan 2023 – Mar 2023)</div></div>
+        <div class="card"><strong>Data Science & Cloud Solutions</strong><div class="small">3Cortex (Jul 2022 – Aug 2022)</div></div>
       </div>
     </section>
 
-    <section>
-      <h2 class="section-title">Strengths</h2>
+    <!-- STRENGTHS -->
+    <section id="strengths" class="card-section" aria-labelledby="strengths-heading">
+      <div class="section-head"><h2 class="section-title" id="strengths-heading">Strengths</h2></div>
+
+      <div class="grid">
+        <div class="card"><strong>Quick Learner</strong><p class="small">Adapt quickly to new tools & frameworks.</p></div>
+        <div class="card"><strong>Team Player</strong><p class="small">Collaborative and communicative in teams.</p></div>
+        <div class="card"><strong>Problem Solver</strong><p class="small">Focus on practical, testable solutions.</p></div>
+        <div class="card"><strong>Adaptability</strong><p class="small">Comfortable in dynamic environments.</p></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card-section" aria-labelledby="contact-heading">
+      <div class="section-head"><h2 class="section-title" id="contact-heading">Contact</h2></div>
+
       <div class="card">
-        <ul>
-          <li>Team Motivation and Mentorship</li>
-          <li>Effective Communication Skills</li>
-          <li>Adaptability and Problem Solving</li>
-          <li>Continuous Learning Mindset</li>
-        </ul>
+        <div class="contact-row">
+        <a href="https://www.google.com/maps/search/?api=1&query=Warangal+Telangana+India" class="pill" target="_blank">
+        <i class="fa-solid fa-location-dot"></i> Warangal, Telangana, India
+        </a>
+        <a href="tel:+919391382916" class="pill">
+        <i class="fa-solid fa-phone"></i> +91 93913 82916
+        </a>
+        <a href="mailto:jagadeeshabommala@gmail.com" class="pill" style="color:var(--accent-1); text-decoration:none;">
+        <i class="fa-regular fa-envelope"></i> jagadeeshabommala@gmail.com
+        </a>
+      </div>
+</div>
+
+
+        <div style="margin-top:14px" class="small">
+          GitHub: <a href="https://github.com/BOMMALAJAGADEESHA" target="_blank" style="color:var(--accent-1)">github.com/BOMMALAJAGADEESHA</a> ·
+          LinkedIn: <a href="https://linkedin.com/in/jagadeeshabommala" target="_blank" style="color:var(--accent-1)">linkedin.com/in/jagadeeshabommala</a>
+        </div>
       </div>
     </section>
 
     <footer>
-      © 2025 Bommala Jagadeesha · All Rights Reserved
+    © 2025 BOMMALA JAGADEESHA · Designed & Developed by BOMMALA JAGADEESHA · 
+    <a href="resume.pdf" style="color:var(--accent-1)" download>Download CV</a>
     </footer>
 
-  </div>
+
+  </main>
+
+  <!-- Lightweight JS: typing + fades + smooth anchor offset -->
+  <script>
+    // Typing effect for name
+    (function(){
+      const el = document.getElementById("typed-name");
+      const text = el.textContent.trim() || "BOMMALA JAGADEESHA";
+      el.textContent = "";
+      let i = 0;
+      const speed = 60;
+      function type(){
+        if(i < text.length){
+          el.textContent += text.charAt(i++);
+          setTimeout(type, speed);
+        }
+      }
+      type();
+    })();
+
+    // Fade-in on scroll for card-like items
+    (function(){
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){
+            e.target.style.transform = "translateY(0)";
+            e.target.style.opacity = 1;
+            obs.unobserve(e.target);
+          }
+        });
+      }, {threshold:0.12});
+
+      document.querySelectorAll('.card, .hero-card, .project-thumb, .skill').forEach(el=>{
+        el.style.transform = "translateY(18px)";
+        el.style.opacity = 0;
+        el.style.transition = "opacity .6s ease, transform .6s ease";
+        obs.observe(el);
+      });
+    })();
+
+    // Smooth anchor scroll offset to account for floating nav
+    (function(){
+      const offset = 20;
+      document.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener('click', (e)=>{
+          const href = a.getAttribute('href');
+          if(!href || href === '#') return;
+          const id = href.slice(1);
+          const target = document.getElementById(id);
+          if(!target) return;
+          e.preventDefault();
+          const top = target.getBoundingClientRect().top + window.scrollY - (window.innerWidth < 880 ? 60 : 90) - offset;
+          window.scrollTo({top, behavior:'smooth'});
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
